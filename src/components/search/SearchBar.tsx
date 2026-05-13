@@ -3,11 +3,11 @@ import { Search} from 'lucide-react';
 
 
 type SearchBarProps  = {
-    palceholder: string,
+    placeholder: string,
     onSearch: (query:string)=>void
 }
 
-const SearchBar = ({palceholder,onSearch}:SearchBarProps) => {
+const SearchBar = ({placeholder,onSearch}:SearchBarProps) => {
 
     const [query, setQuery]= useState("");
 
@@ -21,7 +21,7 @@ const SearchBar = ({palceholder,onSearch}:SearchBarProps) => {
   return (
     
 
-    <div className="relative">
+    <div className="relative w-1/3">
         
 
         <Search 
@@ -30,9 +30,9 @@ const SearchBar = ({palceholder,onSearch}:SearchBarProps) => {
         onClick={handleSubmit}/>
         <input type="search"
         value={query}
-        placeholder={palceholder}
+        placeholder={placeholder}
         onChange = {handleChange}
-        className="outline-gray-200 bg-gray-100 rounded-sm  w-1/3 h-7 px-6 "
+        className="outline-gray-200 bg-gray-100 rounded-sm text-xs  w-full h-7  px-6 "
         
         />
 
